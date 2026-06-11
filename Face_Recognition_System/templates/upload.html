@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='css/style.css') }}">
+</head>
+
+<body>
+
+<h1>Face Recognition System</h1>
+
+<form action="/upload"
+      method="post"
+      enctype="multipart/form-data">
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Enter Name"
+        required>
+
+    <br><br>
+
+    <input
+        type="file"
+        name="image"
+        accept="image/*"
+        required>
+
+    <br><br>
+
+    <button type="submit">
+        Upload & Train
+    </button>
+
+</form>
+
+<br>
+
+<a href="/recognition">
+    <button>
+        Face Recognition
+    </button>
+</a>
+
+</body>
+</html>
